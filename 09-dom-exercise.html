@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Textbox</title>
+</head>
+<body>
+  <input placeholder="Name" class="js-name-input"
+  onkeydown="
+    nameInput(event);
+  ">
+  <button onclick="
+    nameSubmit();
+  ">Submit</button>
+
+  <p class="js-name-display"></p>
+
+  <script>
+    function nameInput(event) {
+      if(event.key === 'Enter'){
+        nameSubmit();
+      }
+    }
+
+
+    function nameSubmit() {
+      const inputElement = document.querySelector('.js-name-input');
+      let name = inputElement.value;
+
+      document.querySelector('.js-name-display').innerHTML = `Your name is ${name}`;
+    }
+  </script>
+
+</body>
+</html>

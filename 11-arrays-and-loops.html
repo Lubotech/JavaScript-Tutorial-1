@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and Loops</title>
+</head>
+<body>
+  <script>
+    const myArray = [10, 20, 30, 40];
+    console.log(myArray);
+
+    console.log(myArray[0]);
+    console.log(myArray[3]);
+
+    myArray[3] = 35;
+    console.log(myArray);
+
+    myArray[4] = 45;
+    console.log(myArray);
+
+    [1, 'Hi', true, {name: 'socks'}, [1, 2]]
+    console.log(typeof [1, 2]);
+    console.log(Array.isArray([1, 2]));
+
+    console.log(myArray.length);
+
+    myArray.push(100); // This method is to add items to an array
+    console.log(myArray);
+
+    myArray.splice(0, 1); // This method is to truncate an array'1st digit for starting point index and the second digit is for how many items to remove' 
+    console.log(myArray);
+  </script>
+</body>
+</html>
