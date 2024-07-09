@@ -1,8 +1,12 @@
-// This is for javasript code 
-<script>
-console.log('Hello, World!');
+const todoList = [];
 
-console.log("Trying out something in GitHub...");
+function addTodo() {
+ const inputElement = document.querySelector('.js-name-input');
+ const name = inputElement.value;
+ //console.log(name);
 
- console.log("Hello, World! This is a JavaScript console log statement.");
-</script>
+ todoList.push(name);
+ console.log(todoList);
+
+ inputElement.value = '';
+}
