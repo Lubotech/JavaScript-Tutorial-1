@@ -7,7 +7,7 @@ function renderTodoList() {
 
   for (var i = 0; i < todoList.length; i++) {
     const todo = todoList[i];
-    const html = `<p>${todo}</p>`;
+    const html = `<p>${todo} <button>Delete</button></p>`; // Generating html
     todoListHTML += html;
   }
   console.log(todoListHTML);
