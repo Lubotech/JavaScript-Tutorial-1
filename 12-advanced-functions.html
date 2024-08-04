@@ -7,15 +7,57 @@
 </head>
 <body>
     <script>
-        function greeting() {
+        /*function greeting() {
             console.log('Hello World!');
         }
         greeting();
 
         const num = 2;
-        const function1 = function greeting() {
-            console.log(`Hello World! I am ${num}`);
+        const function1 = function() {
+            console.log('We are here!');
         }
+
+        console.log(function1);
+        console.log(typeof function1);
+        function1();
+
+        const object1 ={
+            name: 'John',
+            greet: function() {
+                console.log(`Hello, ${this.name}!`);
+            }
+        }
+        object1.greet();
+
+        function display(params) {
+            console.log(params);
+        }
+        display(200);
+
+        function run(param) {
+            param();
+        }
+        run(function() {
+            console.log('Hello from inside the function!');
+        });
+
+        /*  setTimeout() function
+          -allows us to run a function in the future.
+        */
+
+        setTimeout(function() {
+            console.log('Hello after 3 seconds! using the timeout function');
+            console.log('Timeout');
+        }, 3000);
+
+        console.log('Hello from inside the function! next line!');
+
+        setInterval(function() {
+            console.log('Hello every second! using the setInterval function');
+            console.log('Interval');
+        }, 4000);
+
+        console.log('next line 2');
     </script>
 </body>
 </html>
