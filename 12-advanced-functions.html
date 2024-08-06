@@ -6,7 +6,26 @@
     <title>Advanced Functions</title>
 </head>
 <body>
+    <button onclick="" class="js-button"> Click </button>
     <script>
+        /*
+        const buttonElement = document.querySelector('.js-button');
+
+        const eventListener = () => {
+            alert('Button clicked!');
+            console.log('Button clicked!');};
+            
+        // buttonElement.addEventListener('click', eventListener);
+        buttonElement.addEventListener('click', eventListener);
+
+        buttonElement.removeEventListener('click', eventListener);
+
+        buttonElement.addEventListener('click', () => {
+            alert('Button clicked!');
+            console.log('Button clicked second-time!');
+        });
+        */
+
         /*function greeting() {
             console.log('Hello World!');
         }
@@ -45,19 +64,85 @@
           -allows us to run a function in the future.
         */
 
-        setTimeout(function() {
-            console.log('Hello after 3 seconds! using the timeout function');
-            console.log('Timeout');
-        }, 3000);
+        // setTimeout(function() {
+        //     console.log('Hello after 3 seconds! using the timeout function');
+        //     console.log('Timeout');
+        // }, 3000);
 
-        console.log('Hello from inside the function! next line!');
+        // console.log('Hello from inside the function! next line!');
 
-        setInterval(function() {
-            console.log('Hello every second! using the setInterval function');
-            console.log('Interval');
-        }, 4000);
+        // setInterval(function() {
+        //     console.log('Hello every second! using the setInterval function');
+        //     console.log('Interval');
+        // }, 4000);
 
-        console.log('next line 2');
+        // console.log('next line 2');
+
+        /*
+        [
+            'make dinner',
+            'go to sleep',
+            'wake up',
+            'wash dishes',
+            'clean the kitchen',
+            'take a nap'
+        ].forEach((value, index) => {
+            if (value=== 'wash dishes'){
+                return; // stops the loop from executing the remaining iterations
+            }
+            console.log(index + 1, value);
+            console.log(value);
+            //console.log(this.length); // undefined because 'this' inside the forEach function refers to the global object (window in this case)
+        });
+        // forEach() is the preferred way to loop through an array 
+
+        const regularFunction = function(param, param2) {
+            console.log('This is a regular function');
+            return 5;
+        };
+
+        const arrowFunction = () =>{
+             console.log('Here we go...');
+             return 10;
+            };
+            arrowFunction();
+
+        const oneParam = param =>{
+            console.log(param + 1);
+        };    
+        oneParam(5);
+
+        const oneline = () =>  3 + 5;
+        console.log(oneline());
+
+        const object2 = {
+            method: () => {
+                console.log('This is a method');
+                return 10;
+            },
+            method() {
+                console.log('This is a method with the same name');
+                return 5;
+            }
+        };
+        console.log(object2);
+        console.log(object2.method());
+        */
+       console.log([1, 2, -3, -1, -8, 8, -5,  4, 5].filter((value, index) =>{
+        // if (value >= 0){
+        //     return true;
+        // } else {
+        // return false;
+        // }
+        return value >= 0;
+       }));
+
+       console.log([1, 2, 3, 4, 5].map((value, index) =>{
+        return value + 10;
+       }));
+
+       console.log([1, 2, 3, 4, 5].map(value => value * 9));
+
     </script>
 </body>
 </html>
